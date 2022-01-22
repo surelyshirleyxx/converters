@@ -1,5 +1,5 @@
 from encoder import convert
 
 us = input("plz give string: ")
-output = convert(us)
-print(output)
+new_word = convert(us)
+print(new_word)
