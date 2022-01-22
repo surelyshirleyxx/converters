@@ -9,7 +9,7 @@ CONSONANTS = "".join(CONSONANTS)
 
 
 def convert(us):  # us = user_string
-    word = us.split()
+    word = us
 
     # take the first letter and move to end
     # attach "ay" and bob's your uncle
@@ -19,13 +19,15 @@ def convert(us):  # us = user_string
     elif word[0] in CONSONANTS:
         # when only the first letter is a consonant
         word = word[1:] + word[0] + 'ay'
-    elif word[0] in VOWELS:
+    else:
+        word[0] in VOWELS
         # when the first letter is a vowel
         word = word + 'ay'
 
     output = word
 
     # " ".join(['apple', 'bat', 'copy'])
+
 
     if output == "igpay":
         return "hi!"
