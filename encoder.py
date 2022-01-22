@@ -9,20 +9,24 @@ CONSONANTS = "".join(CONSONANTS)
 
 
 def convert(us):  # us = user_string
+    word = us.split()
+
     # take the first letter and move to end
     # attach "ay" and bob's your uncle
-    if us[0] in CONSONANTS and us[1] in CONSONANTS:
-        # now we have the first two consonants!
-        ...
-    elif us[0] in CONSONANTS:
-        ...
-    elif us[0] in VOWELS:
-        ...
+    if word[0] in CONSONANTS and word[1] in CONSONANTS:
+        # when the first two letters are consonants
+        word = word[2:] + word[0] + word[1] + 'ay'
+    elif word[0] in CONSONANTS:
+        # when only the first letter is a consonant
+        word = word[1:] + word[0] + 'ay'
+    elif word[0] in VOWELS:
+        # when the first letter is a vowel
+        word = word + 'ay'
 
-    us = us[1:] + us[0] + "ay"
+    output = word
 
-    output = us
     # " ".join(['apple', 'bat', 'copy'])
+
     if output == "igpay":
         return "hi!"
     return output
