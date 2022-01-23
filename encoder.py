@@ -20,7 +20,7 @@ def convert(us):  # us = user_string
             elif letter[0] in CONSONANTS:
                 # when first letter in each word is a consonant
                 words[i] = word[1:] + word[0] + "ay"
-            elif letter[0] and letter [1] in CONSONANTS:
+            elif letter[0] and letter[1] in CONSONANTS:
                 words[i] = word[2:] + word[0] + word[1] + "ay"
             break
 
