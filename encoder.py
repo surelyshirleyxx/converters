@@ -7,7 +7,6 @@ CONSONANTS = [
 ]
 CONSONANTS = "".join(CONSONANTS)
 
-
 def convert(us):  # us = user_string
     words = us.split()
     # take the first letter and move to end
@@ -18,6 +17,7 @@ def convert(us):  # us = user_string
                 # when the first letter in each word is a vowel
                 words[i] = word[0:] + "ay"
             elif word[0] and word[1] in CONSONANTS:
+                # When the first two letter in each word is a vowel
                 words[i] = word[2:] + word[0] + word[1] + "ay"
             elif word[0] in CONSONANTS:
                 # when first letter in each word is a consonant
